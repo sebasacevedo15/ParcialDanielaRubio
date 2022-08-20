@@ -1,0 +1,68 @@
+PARCIAL 1- Daniela Rubio
+1.¿Qué tipo de variables tiene el dataset? Detalle el tipo de variable de cada
+columna.
+
+gender: cualitativa nominal
+race/ethnicity: cualitativa nominal
+parental level of education: cualitativa ordinal
+lunch: cualitativa 
+test preparation course: cualitativa nominal
+math score: cuantitativa continua
+reading score: cuantitativa continua
+writing score: cuantitativa continua
+
+2.¿Qué tipo de problemas de calidad de datos logra identificar? Defina e
+implemente las estrategias de limpieza de datos que correspondan.
+
+- la base presenta problemas de datos faltantes a nivel de atributo, fila y tabla, es decir, problema de completitud
+- la base no presenta variable de tiempo, lo que represneta un probelma de temporalidad
+- por otra parte la base no presenta problemas de datos duplicados.
+
+Para el tratamiento de la problematica de completitud que es la unica que se puede abordar por el momento,
+para las variables cualitativas dado que los datos faltantes se eneucntran entre 41  y 60 se imputan los datos por moda,
+dado que esto no implica que se sesgue el resultado pues no son representativos dentro de la muestra.
+En el caso de las variables cualitativas las tres presnetan una asimetria negativa por ello a estos se les va a imputar 
+pel dato promedio del campo esto para no sesgar el resultado reemplazando por ceros. 
+
+
+3.¿En qué asignatura en promedio los estudiantes obtuvieron un mejor puntaje?
+¿Hay evidencia de algún sesgo en la distribución de dichos puntajes?
+
+En promedio en la asignatura "reading" fue enla cual los estudiantes obtuvieron el mejor puntaje, y las tres clases
+presentan una asimetria muy similar -3, lo que indica un sesgo a la izquierda.
+
+4.¿Existe alguna correlación entre los puntajes obtenidos en las tres asignaturas?
+
+			math score	reading score	writing score
+math score			1		
+reading score	0,780654147		1	
+writing score	0,752298133	0,909285815			1
+
+Existe una correlacion positiva, en la medida en que obtiene un buen puntaje en una materia lo obtiene en la otra, 
+la correlación más fuerte es la existente enetre reading y writing muy cercana al 1.
+
+5. ¿Hay alguna diferencia observable en los puntajes de la asignatura de matemáticas entre géneros? 
+¿Qué género obtuvo en promedio los mejores puntajes?
+
+En matematicas es donde menor disferencia se presenta entre los puntajes de generos
+El genero que obtuvo el mejor puntaje es femenino.
+
+
+6.¿Qué nivel de escolaridad tienen los padres de los estudiantes que obtuvieron un puntaje por encima del percentil 85 
+en la asignatura de escritura? ¿Cómo se distribuye la escolaridad entre esta población?.
+
+Los padres de los estudiantes que obtuvieorn un puntaje por encima del cuartil 85 (85) tiene todo grado de escolaridad 
+el 28% some college, 25% associate's degree, 17% bachelor´s degree, 13% master's degree, 11% some high school y el 6% high school
+con una distribucón asimetrica positiva, es decir hay un sesgo a la izquierda.
+
+7.¿Qué porcentaje de los estudiantes obtuvieron puntajes iguales o superiores a 90 en las tres asignaturas? 
+De estos estudiantes¿que porcentaje estudió para los exámenes?
+
+El 2,4% de los estudiantes tuvieron score >= 90 en las tres asignaturas, y de ellos el 54,16% estudió para los examenes.
+
+
+
+
+
+
+
